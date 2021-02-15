@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+ 
+{% block header %}
+<h1>Todoのアップデート</h1>
+{% endblock %}
+
+{% block content %}
+  <form action='' method='post'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type='submit' value="Todoをアップデートsする">
+  </form>
+{% endblock %}
